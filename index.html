@@ -2387,6 +2387,88 @@ footer{
     font-size:1.1rem !important;
   }
 }
+	/* MENU BUTTON */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* DEFAULT NAV */
+.main-nav{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .header-inner{
+    flex-wrap:wrap;
+  }
+
+  /* NAV HIDE */
+  .main-nav{
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    display:none;
+    background:#000;
+    margin-top:15px;
+    padding:15px;
+    border-top:1px solid rgba(255,255,255,0.1);
+  }
+
+  /* ACTIVE NAV */
+  .main-nav.active{
+    display:flex;
+  }
+
+  /* DROPDOWN MOBILE */
+  .nav-dropdown-content{
+    position:static;
+    display:none;
+    width:100%;
+    background:#111;
+    margin-top:8px;
+  }
+
+  .nav-dropdown.active .nav-dropdown-content{
+    display:block;
+  }
+
+  .nav-dropdown{
+    width:100%;
+  }
+
+  .nav-dropdown-trigger{
+    display:block;
+    width:100%;
+    padding:10px 0;
+  }
+
+  .header-left{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .header-search input{
+    width:100%;
+  }
+
+  .nasa-logo-link{
+    position:static;
+    transform:none;
+  }
+}
 </style>
 
 </head>
@@ -2400,39 +2482,31 @@ footer{
 
     <!-- LEFT SIDE -->
     <div class="header-left">
-      
-      <!-- EXPLORE -->
       <div class="explore-menu">
         <a href="#" class="explore-link">Explore ▾</a>
       </div>
 
-      <!-- SEARCH -->
       <div class="header-search">
         <input type="text" placeholder="Search">
       </div>
-
     </div>
 
-    <!-- CENTER NASA LOGO -->
+    <!-- LOGO -->
     <a href="https://www.nasa.gov/" class="nasa-logo-link">
-      <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA Logo" class="nasa-logo-img">
+      <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" class="nasa-logo-img">
     </a>
 
-    <!-- RIGHT NAV -->
-    <nav class="main-nav">
+    <!-- MENU BUTTON (MOBILE) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- NAV -->
+    <nav class="main-nav" id="navMenu">
       <div class="nav-dropdown">
-        <span class="nav-dropdown-trigger">News &amp; Events ▾</span>
+        <span class="nav-dropdown-trigger">News & Events ▾</span>
         <div class="nav-dropdown-content">
           <a href="#">News Releases</a>
           <a href="#">Recently Published</a>
-          <a href="#">Video Series on NASA+</a>
-          <a href="#">Podcasts &amp; Audio</a>
-          <a href="#">Blogs</a>
-          <a href="#">Newsletters</a>
-          <a href="#">Social Media</a>
-          <a href="#">Media Resources</a>
-          <a href="#">Events</a>
-          <a href="#">Upcoming Launches &amp; Landings</a>
+          <a href="#">Video Series</a>
         </div>
       </div>
 
@@ -2441,12 +2515,7 @@ footer{
         <div class="nav-dropdown-content">
           <a href="#">NASA+</a>
           <a href="#">Images</a>
-          <a href="#">NASA Live</a>
-          <a href="#">NASA Apps</a>
-          <a href="#">Podcasts</a>
-          <a href="#">Image of the Day</a>
-          <a href="#">e-Books</a>
-          <a href="#">Interactives</a>
+          <a href="#">Live</a>
         </div>
       </div>
 
