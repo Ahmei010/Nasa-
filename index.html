@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NASA</title>
 <style>
+	*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root{
@@ -2210,6 +2215,177 @@ footer{
   color:#8f98b2;
   padding-top:20px;
   border-top:1px solid var(--line);
+}
+	/* =========================
+   GLOBAL CONTAINER
+========================= */
+.container{
+  max-width:1400px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* =========================
+   HEADER RESPONSIVE
+========================= */
+@media(max-width:900px){
+  .header-inner{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .nasa-logo-link{
+    position:static;
+    transform:none;
+  }
+
+  .main-nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .header-search input{
+    width:100%;
+  }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+@media(max-width:1024px){
+  .hero{
+    flex-direction:column;
+    padding:140px 25px 40px;
+  }
+
+  .hero-title{
+    font-size:3.5rem;
+  }
+
+  .hero-desc{
+    font-size:1.1rem;
+  }
+
+  .hero-sidebar{
+    width:100%;
+  }
+}
+
+@media(max-width:600px){
+  .hero-title{
+    font-size:2.2rem;
+  }
+
+  .hero-desc{
+    font-size:1rem;
+  }
+
+  .btn-primary{
+    padding:12px 18px;
+    font-size:0.9rem;
+  }
+}
+
+/* =========================
+   FEATURED GRID
+========================= */
+@media(max-width:1100px){
+  .featured-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .featured-main{
+    grid-column:span 2;
+  }
+}
+
+@media(max-width:600px){
+  .featured-grid{
+    grid-template-columns:1fr;
+  }
+
+  .featured-main{
+    grid-column:span 1;
+  }
+}
+
+/* =========================
+   UNIVERSE CARDS
+========================= */
+@media(max-width:1100px){
+  .universe-card-layout{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .universe-card-layout{
+    grid-template-columns:1fr;
+  }
+}
+
+/* =========================
+   DAILY IMAGE SECTION
+========================= */
+@media(max-width:900px){
+  .daily-image-showcase{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .daily-photo-frame{
+    min-height:auto;
+  }
+
+  .daily-feature-image{
+    width:100%;
+  }
+}
+
+/* =========================
+   GALLERY
+========================= */
+@media(max-width:900px){
+  .stellar-gallery-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* =========================
+   TOPICS GRID
+========================= */
+@media(max-width:1000px){
+  .cosmic-topic-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .cosmic-topic-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* =========================
+   EXTRA MOBILE IMPROVEMENTS
+========================= */
+@media(max-width:600px){
+  body{
+    overflow-x:hidden;
+  }
+
+  h1{
+    font-size:1.8rem !important;
+  }
+
+  h2{
+    font-size:1.4rem !important;
+  }
+
+  h3{
+    font-size:1.1rem !important;
+  }
 }
 </style>
 
